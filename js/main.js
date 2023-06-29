@@ -68,7 +68,7 @@ function submitHandler() {
   /* Graficar rectángulos */
   currentRectangles = Board.create(
     "riemannsum",
-    [mathFunction, numOfRectangles, "left", inf, sup],
+    [mathFunction, numOfRectangles, "right", inf, sup],
     {
       fillColor: "red", fillOpacity: 0.3, strokeColor: "transparent"
     }
@@ -96,7 +96,7 @@ function riemannSum([inf, sup], numOfRectangles, mathFunction) {
   // Sumatoria
   let summation = 0;
 
-  for (let i = 0; i < numOfRectangles; i++) {
+  for (let i = 1; i <= numOfRectangles; i++) {
     // suma += f(a + i * ∆x) * ∆x;
     summation += mathFunction(inf + i * diffX) * diffX;
   }
