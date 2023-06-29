@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sumas de Riemann</title>
+  <!-- math.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.2/math.js"
+    integrity="sha512-ap888g/h47w/Rp6mra1vA5NJtdPZJRxOuF/x7jkrL2NdRB8XrKwXIt/PMvre+oMPUdYt+6NNDjwbdwl/PkYXrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- JSX Graph -->
+  <script src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+  <!-- JSX Graph styles -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css" />
+
+  <!-- Raleway font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Math&family=Raleway:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Custom -->
+  <link rel="stylesheet" href="./css/index.css" />
+  <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+  <div class="title-wrapper">
+    <h1>Integrales con Sumas de Riemann</h1>
+    <p>En JavaScript</p>
+  </div>
+  <main>
+    <form>
+      <div class="function-wrapper">
+        <label>
+          <p class="form-txt">Ingrese una función continua en x:</p>
+          <input type="text" id="custom-function" autocomplete="off" value="(x+20)*(x+10)*(x-25)/500" />
+        </label>
+      </div>
+      <p class="form-txt">Ingrese el rango de la función:</p>
+      <div class="boundaries-wrapper">
+        <label>
+          <span class="form-txt">Desde:</span>
+          <input type="number" id="lower-limit" autocomplete="off" value="-30" />
+        </label>
+        <label>
+          <span class="form-txt">Hasta:</span>
+          <input type="number" id="upper-limit" autocomplete="off" value="30" />
+        </label>
+      </div>
+      <button type="submit">Graficar</button>
+    </form>
+
+    <div class="main-bar"></div>
+
+    <div class="graph-wrapper">
+      <label class="rectangles-num-wrapper">
+        <span class="form-txt">Número de rectángulos:</span>
+        <input type="number" id="num-of-rectangles" autocomplete="off" value="60" />
+      </label>
+      <div id="box" class="jxgbox" style="width:100%; aspect-ratio: 2;"></div>
+      <div id="result-or-error" class="result">
+        <div id="error-wrapper" class="form-txt"></div>
+        <p id="result-wrapper" class="form-txt">--</p>
+      </div>
+      <!-- <div class="jxgbox" style="width:100%; aspect-ratio: 2;"></div> -->
+    </div>
+  </main>
+</body>
+
+</html>
