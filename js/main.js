@@ -1,4 +1,4 @@
-const Board = JXG.JSXGraph.initBoard('box', { boundingbox: [-50, 25, 50, -25], axis: true });
+const Board = JXG.JSXGraph.initBoard('box', { boundingbox: [-30, 15, 30, -15], axis: true });
 let currentRectangles, currentFunction;
 let mathFunction;
 
